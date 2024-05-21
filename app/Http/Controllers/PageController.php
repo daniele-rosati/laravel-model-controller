@@ -8,6 +8,6 @@ class PageController extends Controller
 {
     public function idex()
     {
-        return view ('index', ['movie' => Movie::all]);
+        return view ('index');
     }
 }

@@ -14,4 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PageController::class, 'index']) -> name ('home');
+// Route::get('/', [PageController::class, 'index']) -> name ('home');
+
+Route::get('/', function(){
+    
+    $movies = config('movie');
+    
+    return view('index', compact('movies' ));
+
+})->name('home');
